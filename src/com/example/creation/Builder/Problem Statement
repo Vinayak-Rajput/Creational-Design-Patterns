@@ -1,0 +1,13 @@
+SQL Query Generator
+
+-> You are writing an ORM (Object-Relational Mapper) library. You need to construct
+   complex SQL query strings (e.g., SELECT ... FROM ... WHERE ... ORDER BY ...).
+   Passing all these optional parameters into a single constructor would result in a ]
+   massive, unreadable, and error-prone "telescoping constructor" (a constructor with 10+
+   arguments, most of which might be null).
+
+-> Task: Separate the construction of the complex query from its representation.
+1. Create a QueryBuilder class with methods for each SQL clause (e.g., select(), from(), where(), orderBy()).
+2. Ensure these methods return the builder instance itself (this) to allow method chaining
+    (e.g., builder.select("id").from("users").build()).
+3. Include a build() method that validates the inputs and returns the final generated SQL string.

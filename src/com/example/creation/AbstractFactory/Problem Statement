@@ -1,0 +1,14 @@
+Cross-Platform UI Toolkit
+
+-> You are developing a UI library that supports both Windows and macOS.
+   You need to render different UI components (Buttons, Checkboxes, and
+   TextFields). A Windows button looks and behaves differently than a
+   macOS button. If a user sets their app to "Windows mode," the app must
+   ensure it only spawns Windows-style components, never mixing them up
+   with macOS ones.
+
+-> Task: Create a system that produces families of related objects.
+1. Create interfaces for the products: Button and Checkbox.
+2. Create concrete families: WinButton/WinCheckbox and MacButton/MacCheckbox.
+3. Create an UIFactory interface with createButton() and createCheckbox() methods.
+4. Implement WinUIFactory and MacUIFactory to output their respective components.

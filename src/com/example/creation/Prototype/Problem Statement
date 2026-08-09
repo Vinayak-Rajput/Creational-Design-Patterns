@@ -1,0 +1,16 @@
+Video Game Enemy Spawner
+
+-> You are building an RPG game. You have a complex Enemy class that takes a
+   long time to instantiate because it has to load heavy 3D mesh data, textures,
+   and AI behavior trees from the disk. When the player enters a dungeon, you
+   need to spawn 50 Goblins. Creating each one from scratch via the new keyword
+   creates a massive performance lag.
+
+ -> Task: Implement a cloning mechanism to duplicate an existing object instead
+          of creating it from scratch.
+ 1. Create a base Enemy interface with a clone() method.
+ 2. Create a Goblin class that implements this interface.
+ 3. Instantiate one "Master Goblin" at the start of the game. When the dungeon loads,
+    use the clone() method to create the 50 enemies instantly.
+ 4. Bonus challenge: Ensure your clone is a "deep copy" so that modifying the health
+    of one cloned goblin doesn't accidentally reduce the health of all the others!

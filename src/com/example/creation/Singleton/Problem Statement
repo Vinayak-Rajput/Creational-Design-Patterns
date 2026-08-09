@@ -1,0 +1,13 @@
+Global Application Logger
+
+-> Building a multi-threaded enterprise application that needs to log
+   events, warnings, and errors to a single text file. If multiple parts
+   of the application try to open and write to this file simultaneously,
+   it will cause file-locking crashes and corrupted data.
+
+ -> Task: To create a Logger ckass that gurantees only one instance can ever
+          exist during the application's lifecycle.
+    1. Ensure that no matter how many times a client requests the logger, they
+       get the same instance
+    2. Make sure your implemented is thread safe so that concurrent threads
+       dont accidentally create two instances

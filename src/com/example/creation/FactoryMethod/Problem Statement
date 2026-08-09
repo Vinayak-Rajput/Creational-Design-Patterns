@@ -1,0 +1,24 @@
+Universal Notification System
+
+-> Your company has an app that alerts users about account activities.
+   Currently, it only sends EMails. However the product team wants to
+   add SMS and Push Notifications. The System should decide which
+   notification to send dynamically at runtime based on user preferences.
+
+-> Task: Design a system where the client code doesnt need to know the
+         specific class of the notification it is creating.
+
+1. Create a common Notification interface with a send() method.
+2. Implement concrete classes (EmailNotification, SMSNotification, PushNotification).
+3. Create a NotificationFactory with a method that takes a string (e.g., "SMS") and
+   returns the correct notification object.
+
+NotificationFactory
+ |-->  Email
+ |-->  SMS
+ |-->  Push
+
+Notification
+|--> Email
+|--> SMS
+|--> Push
